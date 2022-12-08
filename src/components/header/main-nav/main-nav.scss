@@ -57,15 +57,15 @@
 
 @keyframes nav-animation {
   0% {
-    transform: rotate(0deg);
+    background: url('../../../image/nav-bg.png') center no-repeat;
   }
   49% {
-    transform: rotate(0deg);
+    background: url('../../../image/nav-bg.png') center no-repeat;
   }
   50% {
-    transform: rotate(280deg);
+    background: url('../../../image/nav-bg-2.png') center no-repeat;
   }
   100% {
-    transform: rotate(280deg);
+    background: url('../../../image/nav-bg-2.png') center no-repeat;
   }
 }

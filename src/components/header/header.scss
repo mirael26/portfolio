@@ -31,11 +31,12 @@
     width: 329px;
     height: 85px;
     background: url('../../image/badge-border.png') center no-repeat;
+    transition: transform 0.1s;
   }
 
   &:hover::before {
-    top: 0px;
-    left: 0px;
+    transition: transform 0.1s;
+    transform: translate(4px, 4px);
   }
 }
 
