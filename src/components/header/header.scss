@@ -1,0 +1,45 @@
+@use '../../scss/mixins' as m;
+@use '../../scss/variables' as *;
+
+.header {
+  @include m.center-container;
+  display: flex;
+  padding: 30px 8px;
+}
+
+.header__badge-link {
+
+}
+
+.header__badge {
+  @include m.h1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 13px 35px;
+  width: 341px;
+  height: 90px;
+  line-height: 29px;
+  background: url('../../image/badge-bg.png') center no-repeat;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: -4px;
+    left: -5px;
+    width: 329px;
+    height: 85px;
+    background: url('../../image/badge-border.png') center no-repeat;
+  }
+
+  &:hover::before {
+    top: 0px;
+    left: 0px;
+  }
+}
+
+.header__badge-subtitle {
+  @include m.text;
+  font-size: 24px;
+  color: $light-text;
+}
