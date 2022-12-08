@@ -1,0 +1,71 @@
+@use '../../../scss/mixins.scss' as m;
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-nav__link {
+  @include m.nav-text;
+  position: relative;
+  display: block;
+  width: 108px;
+  padding-top: 83px;
+  text-align: center;
+
+  &--about {
+    background: url('../../../image/about-icon.png') top left calc(50% - 4px) no-repeat;
+  }
+
+  &--skills {
+    background: url('../../../image/skills-icon.png') top left calc(50% - 4px) no-repeat;
+  }
+
+  &--education {
+    background: url('../../../image/education-icon.png') top left calc(50% - 4px) no-repeat;
+  }
+
+  &--experience {
+    background: url('../../../image/experience-icon.png') top left calc(50% - 4px) no-repeat;
+  }
+
+  &--portfolio {
+    background: url('../../../image/portfolio-icon.png') top left calc(50% - 4px) no-repeat;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 6px;
+    left: 18px;
+    width: 74px;
+    height: 70px;
+    background: url('../../../image/nav-bg.png') center no-repeat;
+    z-index: -1;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+
+  &:hover::after {
+    animation: nav-animation 0.25s infinite ;
+  }
+}
+
+@keyframes nav-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  49% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(280deg);
+  }
+  100% {
+    transform: rotate(280deg);
+  }
+}

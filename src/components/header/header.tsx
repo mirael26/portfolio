@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { AppUrl } from '../../consts';
 import './header.scss';
+import MainNav from './main-nav/main-nav';
 
 const Header = () => (
   <div className="header">
@@ -10,6 +11,8 @@ const Header = () => (
         <span className="header__badge-subtitle">Frontend developer</span>
       </div>
     </Link>
+
+    <MainNav/>
   </div>
 );
 
