@@ -1,0 +1,48 @@
+@mixin h1 {
+  font-family: 'PT Sans', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 31px;
+  color: $dark-text;
+}
+
+@mixin h2 {
+  font-family: 'PT Sans', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  color: $dark-text;
+}
+
+@mixin text {
+  font-family: 'PT Sans', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  color: $dark-text;
+}
+
+@mixin strong-text {
+  font-family: 'PT Sans', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  color: $dark-text;
+}
+
+@mixin nav-text {
+  font-family: 'PT Sans', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $dark-text;
+}
+
+@mixin accent-title {
+  font-family: 'PT Sans', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  color: $accent-text;
+}
