@@ -9,13 +9,13 @@ const About = () => (
       <p className="about__text">Меня всегда привлекал дизайн и нравились красивые интерфейсы. Я хотела развиваться как дизайнер, но в какой-то момент попробовала верстку.
         <br/><span className='about__highlighted'>И мне понравилось!</span><br/>
         Так я попала во фронтенд.</p>
-      <p className="about__text">Обладаю такими полезными качествами как:
+      <div className="about__text">Обладаю такими полезными качествами как:
         <ul className="about__text-list">
           <li className="about__text-item">настойчивость;</li>
           <li className="about__text-item">ответственность;</li>
           <li className="about__text-item">неконфликтность.</li>
         </ul>
-      </p>
+      </div>
       <p className="about__text">Еще я в меру перфекционист, люблю писать аккуратный код и искать решения в первую очередь самостоятельно, а уже потом обращаться к старшему товарищу.</p>
       <p className="about__text"><span className='about__highlighted'>Связаться со мной:</span><br/>capricorn_26@mail.ru</p>
       <Social/>
