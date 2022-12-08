@@ -1,0 +1,45 @@
+.social {
+  display: flex;
+  gap: 40px;
+  margin-left: 5px;
+}
+
+.social__icon {
+  position: relative;
+  width: 40px;
+  height: 42px;
+
+  &--vk {
+    background: url('../../../image/vk-icon.svg') center no-repeat;
+    background-size: contain;
+  }
+
+  &--github {
+    background: url('../../../image/github-icon.svg') center no-repeat;
+    background-size: contain;
+  }
+
+  &--telegram {
+    background: url('../../../image/telegram-icon.svg') center no-repeat;
+    background-size: contain;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: -17px;
+    left: -25px;
+    width: 82px;
+    height: 70px;
+    background: url('../../../image/social-bg.png') center no-repeat;
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 1s;
+
+  }
+
+  &:hover::after {
+    transition: opacity 1s;
+    opacity: 0;
+  }
+}

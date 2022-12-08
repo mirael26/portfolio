@@ -1,0 +1,68 @@
+@use '../../scss/mixins' as m;
+
+.about {
+  @include m.center-container;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 120px 50px;
+  color: green;
+  font-family: 'PT Sans';
+  font-weight: 400;
+  font-style: italic;
+  font-size: 30px;
+}
+
+.about__info {
+  width: 560px;
+  padding-top: 17px;
+}
+
+.about__text {
+  @include m.text;
+  margin-bottom: 27px;
+
+  &:first-child {
+    margin-left: 70px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 35px;
+  }
+}
+
+.about__accent-text {
+  @include m.strong-text;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: -7px;
+    left: -11px;
+    width: 108px;
+    height: 7px;
+    background: url('../../image/underline-short.png') center no-repeat;
+    background-size: 108px 7px;
+  }
+}
+
+.about__highlighted {
+  @include m.strong-text;
+}
+
+.about__text-list {
+  margin-left: 22px;
+  list-style-type: square;
+}
+
+.about__photo {
+  padding-top: 21px;
+  padding-left: 18px;
+  width: 371px;
+  height: 538px;
+  background: url('../../image/photo-border.png') center no-repeat;
+}
+
+.about__photo img {
+  border-radius: 10px;
+}
