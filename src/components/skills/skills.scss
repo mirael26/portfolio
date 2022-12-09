@@ -1,0 +1,106 @@
+@use '../../scss/mixins' as m;
+@use '../../scss/variables' as *;
+
+.skills {
+  @include m.center-container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 120px 50px;
+  animation: page-appearance 1.5s forwards;
+}
+
+.skills__technologies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills__title {
+  @include m.h2;
+  position: relative;
+  width: fit-content;
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: -7px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: 7px;
+    background: url('../../image/underline-short.png') center no-repeat;
+    background-size: 100% 7px;
+  }
+}
+
+.skills__technologies-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  padding: 50px 0 40px;
+}
+
+.skills__technologies-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.skills__technology {
+  position: relative;
+  max-width: 107px;
+  height: 107px;
+}
+
+.skills__icon {
+}
+
+.skills__tooltip {
+  @include m.h2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 107px;
+  height: 107px;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: rgba(#fff, 0.85);
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translateY(50px);
+
+  .skills__technology:hover & {
+    opacity: 1;
+    transition: all 0.5s;
+    transform: translateY(0);
+  }
+}
+
+.skills__another-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills__text {
+  @include m.text;
+  margin-top: 20px;
+  text-align: center;
+}
+
+@keyframes page-appearance {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
