@@ -5,6 +5,20 @@
   @include m.center-container;
   display: flex;
   padding: 30px 8px;
+  opacity: 0;
+  animation: header-appearance 1.5s forwards;
+
+}
+
+@keyframes header-appearance {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .header__badge-link {
