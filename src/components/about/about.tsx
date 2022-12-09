@@ -16,7 +16,7 @@ const About = () => (
           <li className="about__text-item">неконфликтность.</li>
         </ul>
       </div>
-      <p className="about__text">Еще я в меру перфекционист, люблю писать аккуратный код и искать решения в первую очередь самостоятельно, а уже потом обращаться к старшему товарищу.</p>
+      <p className="about__text">Еще я в меру перфекционист, люблю писать аккуратный код и стараюсь находить решения самостоятельно.</p>
       <p className="about__text"><span className='about__highlighted'>Связаться со мной:</span><br/>capricorn_26@mail.ru</p>
       <Social/>
     </div>

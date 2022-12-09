@@ -11,7 +11,7 @@
   font-style: italic;
   font-size: 30px;
   opacity: 0;
-  animation: about-page-appearance 1.5s 0.6s forwards;
+  animation: page-appearance 1.5s forwards;
 }
 
 .about__info {
@@ -69,7 +69,7 @@
   border-radius: 10px;
 }
 
-@keyframes about-page-appearance {
+@keyframes page-appearance {
   0% {
     opacity: 0;
     transform: translateY(-20px);
