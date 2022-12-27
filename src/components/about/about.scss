@@ -1,7 +1,9 @@
 @use '../../scss/mixins' as m;
+@use '../../scss/animation' as a;
 
 .about {
   @include m.center-container;
+  @include a.page-appearance;
   display: flex;
   justify-content: space-between;
   padding: 40px 120px 50px;
@@ -67,15 +69,4 @@
 
 .about__photo img {
   border-radius: 10px;
-}
-
-@keyframes page-appearance {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

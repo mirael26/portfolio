@@ -1,8 +1,10 @@
 @use '../../scss/mixins' as m;
+@use '../../scss/animation' as a;
 @use '../../scss/variables' as *;
 
 .skills {
   @include m.center-container;
+  @include a.page-appearance;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,9 +54,6 @@
   position: relative;
   max-width: 107px;
   height: 107px;
-}
-
-.skills__icon {
 }
 
 .skills__tooltip {
