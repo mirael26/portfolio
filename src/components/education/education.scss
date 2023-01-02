@@ -5,11 +5,12 @@
   @include m.center-container;
   display: flex;
   flex-direction: column;
-  padding: 40px 120px 50px 226px;
+  padding: 40px 0 50px;
 }
 
 .education__list {
   position: relative;
+  margin: 0 120px 40px 226px;
   
   &::before {
     position: absolute;
@@ -40,6 +41,20 @@
     height: 7px;
     background: url('../../image/underline-long.png') center no-repeat;
     background-size: 100% 7px;
+  }
+}
+
+.education__certificates {
+  display: flex;
+  justify-content: space-between;
+}
+
+.education__certificates-image {
+  height: 309px;
+  
+  &:hover {
+    cursor: pointer;
+    outline: 3px solid $accent;
   }
 }
 

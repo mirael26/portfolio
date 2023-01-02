@@ -1,39 +1,6 @@
-import { IEducationInfo } from '../../type';
+import { educationInfo } from '../../consts';
 import EducationItem from './education-item/education-item';
 import './education.scss';
-
-const educationInfo: Array<IEducationInfo> = [
-  {
-    year: '2008-2013',
-    title: 'Маркетинг (высшее)',
-    institution: 'СибУПК'
-  },
-  {
-    year: '2019',
-    title: 'HTML и CSS, уровень 1',
-    institution: 'HTML Academy'
-  },
-  {
-    year: '2020',
-    title: 'HTML и CSS, уровень 2',
-    institution: 'HTML Academy'
-  },
-  {
-    year: '2020',
-    title: 'JavaScript. Профессиональная разработка веб-интерфейсов',
-    institution: 'HTML Academy'
-  },
-  {
-    year: '2020',
-    title: 'JavaScript. Архитектура клиентских приложений',
-    institution: 'HTML Academy'
-  },
-  {
-    year: '2020',
-    title: 'React. Разработка сложных клиентских приложений',
-    institution: 'HTML Academy'
-  },
-];
 
 const Education = () => (
   <div className="education">
@@ -43,7 +10,23 @@ const Education = () => (
         return <EducationItem key={`ed-item-${i}`} info={info} index={i + 1}/>
       })}
     </div>
-    <div className="education__line"></div>
+    <div className="education__certificates">
+      <div className="education__certificates-image">
+        <img src={require('../../image/certificate-prev-1.png')} alt="Сертификат" />
+      </div>
+      <div className="education__certificates-image">
+        <img src={require('../../image/certificate-prev-2.png')} alt="Сертификат" />
+      </div>
+      <div className="education__certificates-image">
+        <img src={require('../../image/certificate-prev-3.png')} alt="Сертификат" />
+      </div>
+      <div className="education__certificates-image">
+        <img src={require('../../image/certificate-prev-4.png')} alt="Сертификат" />
+      </div>
+      <div className="education__certificates-image">
+        <img src={require('../../image/certificate-prev-5.png')} alt="Сертификат" />
+      </div>
+    </div>
   </div>
 );
 
