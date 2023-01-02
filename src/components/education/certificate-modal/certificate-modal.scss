@@ -1,0 +1,30 @@
+.certificate-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(black, 0.8);
+  animation: opacity 0.5s backwards;
+}
+
+.certificate-modal__certificate {
+  height: 100vh;
+  cursor: zoom-out;
+}
+
+.certificate-modal__certificate img {
+  max-height: 100%;
+  width: auto;
+  cursor: zoom-out;
+}
+
+@keyframes opacity {
+  from {opacity: 0}
+  to {opacity: 1}
+}

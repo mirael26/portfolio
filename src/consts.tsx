@@ -7,11 +7,9 @@ export const AppUrl = {
   Portfolio: '/portfolio',
 } as const;
 
-
-
 export const educationInfo = [
   {
-    year: '2008-2053',
+    year: '2008-2013',
     title: 'Маркетинг (высшее)',
     institution: 'СибУПК'
   },
