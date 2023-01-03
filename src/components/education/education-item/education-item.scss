@@ -1,0 +1,47 @@
+@use '../../../scss/mixins' as m;
+@use '../../../scss/variables' as *;
+
+.education-item {
+  overflow: hidden;
+  margin-bottom: 50px;
+  animation-name: education-appearance;
+  animation-duration: 0.8s;
+  animation-fill-mode: backwards;
+}
+
+.education-item__container {
+  position: relative;
+  width: 600px;
+  padding-left: 44px;
+  
+  &::before {
+    position: absolute;
+    content: '';
+    top: 3px;
+    left: 0;
+    height: 23px;
+    width: 23px;
+    background-color: $accent;
+    border: 4px solid white;
+    border-radius: 50%;
+  }
+}
+
+.education-item__year {
+  @include m.accent-title;
+  margin-bottom: 12px;
+}
+
+.education-item__title {
+  @include m.strong-text;
+}
+
+.education-item__institution {
+  @include m.text;
+  font-style: italic;
+}
+
+@keyframes education-appearance {
+  from { width: 0%; }
+  to { width: 100% }
+}

@@ -1,0 +1,51 @@
+@use '../../../scss/mixins' as m;
+@use '../../../scss/variables' as *;
+
+.experience-item {
+  overflow: hidden;
+  margin-bottom: 70px;
+  animation-name: experience-appearance;
+  animation-duration: 0.8s;
+  animation-fill-mode: backwards;
+}
+
+.experience-item__container {
+  position: relative;
+  width: 925px;
+  padding-left: 44px;
+  
+  &::before {
+    position: absolute;
+    content: '';
+    top: 3px;
+    left: 0;
+    height: 23px;
+    width: 23px;
+    background-color: $accent;
+    border: 4px solid white;
+    border-radius: 50%;
+  }
+}
+
+.experience-item__period {
+  @include m.accent-title;
+  margin-bottom: 12px;
+}
+
+.experience-item__company {
+  @include m.text;
+}
+
+.experience-item__position {
+  @include m.strong-text;
+}
+
+.experience-item__description {
+  @include m.text;
+  white-space: pre-line;
+}
+
+@keyframes experience-appearance {
+  from { width: 0%; }
+  to { width: 100% }
+}
