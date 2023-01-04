@@ -10,3 +10,17 @@ export interface IExperienceInfo {
   position: string; 
   description: string;
 }
+
+export interface IPortfolioData {
+  title: string;
+  description: string;
+  demoSrc?: string;
+  codeSrc?: string;
+  layout: boolean;
+  spa: boolean;
+  typescript: boolean;
+  redux: boolean;
+  animation: boolean;
+  tests: boolean;
+  preview: string;
+}
