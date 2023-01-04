@@ -1,0 +1,87 @@
+@use '../../../scss/mixins' as m;
+@use '../../../scss/variables' as *;
+
+.portfolio-card {
+  display: flex;
+  justify-content: start;
+}
+
+.portfolio-card__image {
+  position: relative;
+  top: 4px;
+  left: 4px;
+  flex-shrink: 0;
+  width: 330px;
+  height: 219px;
+  margin-right: 54px;
+  margin-top: 5px;
+  border: 4px solid $dark;
+  outline: 4px solid $accent;
+  border-radius: 10px;
+}
+
+.portfolio-card__image img {
+  border-radius: 5px;
+
+}
+
+.portfolio-card__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-card__title {
+  @include m.accent-title;
+  margin-bottom: 7px;
+}
+
+.portfolio-card__description {
+  @include m.text;
+  margin-bottom: 23px;
+  white-space: pre-line;
+}
+
+.portfolio-card__buttons {
+  display: flex;
+  gap: 33px;
+}
+
+.portfolio-card__button-wrapper {
+  transition: transform 0.5s;
+
+  &:hover {
+    transition: transform 0.5s;
+    transform: scale(1.1, 1.1);
+  }
+}
+
+.portfolio-card__button {
+  @include m.text;
+  position: relative;
+  display: block;
+  width: 84px;
+  height: 71px;
+  margin-left: -5px;
+  padding: 40px 15px 8px 15px;
+  font-size: 18px;
+  text-align: center;
+
+  &--demo {
+    background: url('../../../image/demo-icon.png') center top 12px no-repeat;
+  }
+
+  &--code {
+    background: url('../../../image/code-icon.png') center top 12px no-repeat;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 84px;
+    height: 71px;
+    background: url('../../../image/button-bg.png') center no-repeat;
+    z-index: -1;
+  }
+}

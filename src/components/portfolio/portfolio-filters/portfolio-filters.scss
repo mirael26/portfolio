@@ -1,0 +1,38 @@
+@use '../../../scss/mixins.scss' as m;
+@use '../../../scss/variables.scss' as *;
+
+.portfolio-filters {
+  display: flex;
+  align-items: center;
+  margin-bottom: 55px;
+  padding-left: 164px;
+}
+
+.portfolio-filters__title {
+  @include m.strong-text;
+  margin-right: 32px;
+}
+
+.portfolio-filters__list {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 25px;
+}
+
+.portfolio-filters__filter {
+  @include m.text;
+  display: flex;
+  justify-content: center;
+  min-width: 120px;
+  padding: 1px 12px 2px;
+  border: 2px solid $accent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 1s;
+
+  &.active {
+    background-color: $accent;
+    transition: background-color 1s;
+  }
+}
