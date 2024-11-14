@@ -1,0 +1,16 @@
+@forward './scss/normalize.css';
+@forward './scss/color.scss';
+@forward './scss/scaffolding.scss';
+@forward './scss/visually-hidden.scss';
+@forward './scss/fonts.scss';
+
+@forward './app.scss';
+@forward './components/common/common.scss';
+@forward './components/menu/menu.scss';
+@forward './components/menu-big/menu-big.scss';
+@forward './components/main/main.scss';
+@forward './components/about/about.scss';
+@forward './components/skills/skills.scss';
+@forward './components/education/education.scss';
+@forward './components/experience/experience.scss';
+@forward './components/projects/projects.scss';

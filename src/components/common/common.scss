@@ -1,0 +1,12 @@
+@use './../../scss/color.scss';
+
+.common {
+  width: 100%;
+  position: absolute;
+
+  &__name {
+    font-size: 64px;
+    line-height: 95px;
+    text-transform: uppercase;
+  }
+}

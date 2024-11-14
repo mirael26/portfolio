@@ -1,0 +1,77 @@
+@use './../../scss/color.scss';
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  padding: 263px 272px;
+
+  &__text {
+    font-size: 40px;
+    color: color.$white-default;
+  }
+
+  &__text-container {
+    overflow: hidden;
+    width: 1000px;
+    height: 70px;
+
+    &--lastname {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__name {
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: text-appear-out 0.7s 1s both ease-in;
+  }
+
+  &__lastname {
+    height: 96px;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: text-appear-out 0.7s 1.2s both ease-in;
+  }
+
+  &__profession {
+    font-size: 40px;
+    line-height: normal;
+    font-weight: 700;
+
+    span:first-child {
+      animation: text-appear-opacity 2.5s 1.9s both ease;
+    }
+
+    span:last-child {
+      animation: text-appear-opacity 2.5s 2.5s both ease;
+    }
+  }
+}
+
+@keyframes text-appear-out {
+  0% {
+    transform: translateY(96px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes text-appear-opacity {
+  from {
+    opacity: 0;
+    color: rgb(12, 43, 90);
+  }
+  to {
+    opacity: 1;
+    color: color.$white-default;
+  }
+}

@@ -1,0 +1,52 @@
+@use './../../scss/color.scss';
+
+.menu {
+  position: relative;
+  z-index: 100;
+  width: 233px;
+  position: fixed;
+  top: 0;
+  left: calc(50% + 523px);
+
+  &::after {
+    z-index: -2;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: color.$bg-grey;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 38px 40px 67px 45px;
+  }
+
+  &__link {
+    font-size: 24px;
+    color: color.$black-default;
+    transition: color 0.3s;
+
+    &:hover,
+    &:active {
+      color: color.$pale;
+    }
+  }
+
+  &__highlight {
+    z-index: -1;
+    position: absolute;
+    left: 29px;
+    width: 175px;
+    height: 41px;
+    background-color: rgba(color.$white-default, 0.8);
+    border-radius: 10px;
+    transition: top 0.3s ease-in-out;
+  }
+}

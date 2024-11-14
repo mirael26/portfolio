@@ -1,0 +1,8 @@
+@use './scss/color.scss';
+
+.app {
+  position: relative;
+  height: 100%;
+  min-height: 100vh;
+  background-color: color.$white-default;
+}
