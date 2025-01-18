@@ -1,5 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'motion/react';
 import RoutesWithAnimation from './components/routes-with-animation/routes-with-animation';
 import Common from './components/common/common';
 

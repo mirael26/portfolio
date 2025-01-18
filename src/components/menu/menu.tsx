@@ -1,34 +1,56 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import { AppUrl } from '../../const';
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const HIGHLIGHT_TOP_PADDING = 3;
 
 const Menu = () => {
+  const [test, setTest] = useState(0);
+
   const highlightRef = useRef<HTMLDivElement | null>(null);
   const menuRef = useRef<HTMLElement | null>(null);
-  const location = useLocation();
+  const { pathname } = useLocation();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     moveHighlight();
-  }, [location.pathname]);
+  }, [pathname]);
 
   const moveHighlight = () => {
     const activeLink = menuRef.current?.querySelector(
-      `[data-path='${location.pathname}']`
+      `[data-path='${pathname}']`
     );
     if (menuRef.current && activeLink && highlightRef.current) {
       const top =
-        activeLink?.getBoundingClientRect().y -
-        menuRef.current?.getBoundingClientRect().y -
+        activeLink?.getBoundingClientRect().top -
+        menuRef.current?.getBoundingClientRect().top -
         HIGHLIGHT_TOP_PADDING;
 
-      highlightRef.current.style.top = `${top}px`;
+      setTest(top);
+      // highlightRef.current.style.top = `${top}px`;
     }
   };
 
+  const isMainPage = pathname === AppUrl.Main;
+
   return (
-    <nav className='menu' ref={menuRef}>
+    <motion.nav
+      key='menu'
+      className='menu'
+      ref={menuRef}
+      initial={false}
+      variants={{
+        close: { y: -333 },
+        open: {
+          y: 0,
+          transition: {
+            type: 'tween',
+            delay: 1.4,
+          },
+        },
+      }}
+      animate={isMainPage ? 'close' : 'open'}
+    >
       <ul className='menu__list'>
         <li className='menu__item'>
           <NavLink
@@ -76,8 +98,12 @@ const Menu = () => {
           </NavLink>
         </li>
       </ul>
-      <div className='menu__highlight' ref={highlightRef}></div>
-    </nav>
+      <div
+        className='menu__highlight'
+        ref={highlightRef}
+        style={{ top: `${test}px` }}
+      ></div>
+    </motion.nav>
   );
 };
 

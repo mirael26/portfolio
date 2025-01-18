@@ -2,11 +2,18 @@
 
 .common {
   width: 100%;
-  position: absolute;
+  position: relative;
+  min-height: 100vh;
+  padding: 437px 90px 90px;
 
   &__name {
+    position: absolute;
     font-size: 64px;
-    line-height: 95px;
     text-transform: uppercase;
+  }
+
+  &__specialty {
+    position: absolute;
+    font-size: 36px;
   }
 }
