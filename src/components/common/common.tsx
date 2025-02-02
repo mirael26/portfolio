@@ -9,15 +9,16 @@ const nameVariants: Variants = {
     y: 50,
     opacity: 0,
     fontSize: '64px',
-    top: '189px',
+    top: '20%',
     left: 'calc(50% - 325px)',
   },
   main: {
     y: 0,
     opacity: 1,
     fontSize: '64px',
-    top: '189px',
+    top: '20%',
     left: 'calc(50% - 325px)',
+    height: '100vh',
     transition: {
       ease: 'easeInOut',
       duration: 0.4,
@@ -28,12 +29,13 @@ const nameVariants: Variants = {
     opacity: 1,
     top: '22px',
     left: 0,
+    height: '87px',
     fontSize: '32px',
     scale: [1, 0.6, 1],
     transition: {
       ease: 'easeInOut',
-      duration: 0.6,
-      delay: 0.8,
+      duration: 0.5,
+      delay: 0.5,
     },
   },
 };
@@ -55,8 +57,8 @@ const specialtyVariants = {
     scale: [1, 0.6, 1],
     transition: {
       ease: 'easeInOut',
-      duration: 0.6,
-      delay: 0.9,
+      duration: 0.5,
+      delay: 0.5,
     },
   },
   main: {

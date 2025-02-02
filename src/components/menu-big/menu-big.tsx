@@ -36,9 +36,9 @@ const MenuBig = () => {
                 x: 0,
                 opacity: 0,
                 transition: {
-                  delay: 0.8,
+                  delay: 0.3,
                   delayChildren: 0,
-                  staggerChildren: 0.2,
+                  staggerChildren: 0.05,
                   staggerDirection: -1,
                 },
               },
@@ -48,27 +48,47 @@ const MenuBig = () => {
             exit={'exit'}
           >
             <motion.li className='menu-big__item'>
-              <NavLink to={AppUrl.About} className='menu-big__link'>
+              <NavLink
+                to={AppUrl.About}
+                state={{ fromMain: true }}
+                className='menu-big__link'
+              >
                 Обо мне
               </NavLink>
             </motion.li>
             <motion.li className='menu-big__item' variants={itemVariants}>
-              <NavLink to={AppUrl.Skills} className='menu-big__link'>
+              <NavLink
+                to={AppUrl.Skills}
+                state={{ fromMain: true }}
+                className='menu-big__link'
+              >
                 Навыки
               </NavLink>
             </motion.li>
             <motion.li className='menu-big__item' variants={itemVariants}>
-              <NavLink to={AppUrl.Education} className='menu-big__link'>
+              <NavLink
+                to={AppUrl.Education}
+                state={{ fromMain: true }}
+                className='menu-big__link'
+              >
                 Обучение
               </NavLink>
             </motion.li>
             <motion.li className='menu-big__item' variants={itemVariants}>
-              <NavLink to={AppUrl.Experience} className='menu-big__link'>
+              <NavLink
+                to={AppUrl.Experience}
+                state={{ fromMain: true }}
+                className='menu-big__link'
+              >
                 Опыт работы
               </NavLink>
             </motion.li>
             <motion.li className='menu-big__item' variants={itemVariants}>
-              <NavLink to={AppUrl.Projects} className='menu-big__link'>
+              <NavLink
+                to={AppUrl.Projects}
+                state={{ fromMain: true }}
+                className='menu-big__link'
+              >
                 Проекты
               </NavLink>
             </motion.li>

@@ -1,11 +1,25 @@
 export const routeVariants = {
   initial: {
-    y: '100vh',
+    y: '100px',
+    opacity: 0,
   },
   final: {
-    y: '0vh',
+    opacity: 1,
+    y: '0px',
     transition: {
-      type: 'spring',
+      delay: 0.3,
+      duration: 0.3,
+      // type: 'spring',
+      mass: 0.2,
+    },
+  },
+  finalFromMain: {
+    opacity: 1,
+    y: '0px',
+    transition: {
+      delay: 1.2,
+      duration: 0.3,
+      // type: 'spring',
       mass: 0.2,
     },
   },

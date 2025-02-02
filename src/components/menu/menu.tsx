@@ -1,7 +1,7 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import { AppUrl } from '../../const';
 import { useLayoutEffect, useRef, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const HIGHLIGHT_TOP_PADDING = 3;
 
@@ -45,7 +45,7 @@ const Menu = () => {
           y: 0,
           transition: {
             type: 'tween',
-            delay: 1.4,
+            delay: 1.2,
           },
         },
       }}

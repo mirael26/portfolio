@@ -1,3 +1,57 @@
+@use './../../scss/mixins.scss';
+@use './../../scss/color.scss';
+
 .about {
+  @include mixins.page;
   min-height: 100vh;
+
+  &__title {
+    @include mixins.title;
+    margin-bottom: 25px;
+  }
+
+  &__content {
+    display: flex;
+    gap: 20px;
+    width: 816px;
+    padding: 58px 55px 58px 69px;
+    background: color.$bg-grey;
+    border-radius: 15px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+
+    p + p,
+    ul + p {
+      margin-top: 20px;
+    }
+
+    ul {
+      padding-left: 23px;
+    }
+
+    li {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: -10px;
+        width: 3px;
+        height: 3px;
+        background-color: color.$black-default;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__photo {
+    width: 169px;
+    height: 169px;
+    border-radius: 50%;
+  }
 }

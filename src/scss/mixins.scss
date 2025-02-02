@@ -1,13 +1,10 @@
-@use './../../scss/color.scss';
+@use './color';
 
 @mixin page {
-  padding-top: 147px;
-  width: 1280px;
-  margin: 0 auto;
+  padding-top: 123px;
 }
 
 @mixin title {
-  margin-bottom: 25px;
   font-weight: 400;
   font-size: 36px;
   line-height: 53px;

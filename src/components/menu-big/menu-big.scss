@@ -1,6 +1,10 @@
 @use './../../scss/color.scss';
 
 .menu-big {
+  position: absolute;
+  left: calc(50% - 550px);
+  top: 47%;
+
   &__list {
     display: flex;
     gap: 32px;
