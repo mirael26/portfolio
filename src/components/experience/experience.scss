@@ -1,3 +1,105 @@
+@use './../../scss/mixins.scss';
+@use './../../scss/color.scss';
+
 .experience {
+  @include mixins.page;
   min-height: 100vh;
+  padding-bottom: 50px;
+
+  &__title {
+    @include mixins.title;
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    width: 909px;
+  }
+
+  &__item {
+    position: relative;
+    padding: 38px 250px 62px 44px;
+    background-color: color.$bg-grey;
+    border-radius: 15px;
+  }
+
+  &__header {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 34px;
+  }
+
+  &__date {
+    padding: 10px 23px;
+    background-color: color.$white-default;
+    border-radius: 10px;
+  }
+
+  &__company-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__company {
+    margin-bottom: 3px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-decoration: underline;
+    text-decoration-thickness: from-font;
+  }
+
+  &__position {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: color.$pale;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-left: 22px;
+    }
+
+    li {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 11px;
+        left: -13px;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: color.$black-default;
+      }
+    }
+  }
+
+  &__stack-list {
+    position: absolute;
+    top: 38px;
+    right: 36px;
+    padding: 20px 24px 34px;
+    list-style: none;
+    background-color: color.$white-default;
+    border-radius: 10px;
+  }
+
+  &__stack-item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: color.$pale;
+  }
 }

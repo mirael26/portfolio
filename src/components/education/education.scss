@@ -1,3 +1,60 @@
+@use './../../scss/mixins.scss';
+@use './../../scss/color.scss';
+
 .education {
+  @include mixins.page;
   min-height: 100vh;
+  padding-bottom: 50px;
+
+  &__title {
+    @include mixins.title;
+    margin-bottom: 20px;
+  }
+
+  &__block {
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 910px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 18px 30px 16px;
+    border-radius: 15px;
+    background-color: color.$bg-grey;
+  }
+
+  &__header {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 9px;
+  }
+
+  &__date {
+    padding: 2px 11px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: color.$white-default;
+    border-radius: 10px;
+  }
+
+  &__place {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: color.$pale;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

@@ -1,3 +1,142 @@
+@use './../../scss/mixins.scss';
+@use './../../scss/color.scss';
+
 .projects {
+  @include mixins.page;
   min-height: 100vh;
+  padding-bottom: 200px;
+
+  &__header {
+    max-width: 909px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    @include mixins.title;
+  }
+
+  &__github {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url('/img/github-logo.svg') center no-repeat;
+    font-size: 0;
+    transition: opacity 0.3s;
+
+    &:hover,
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: flex-start;
+    max-width: 909px;
+  }
+
+  &__item {
+    padding: 41px 45px 35px 48px;
+    width: 427px;
+    background-color: color.$bg-grey;
+    border-radius: 15px;
+  }
+
+  &__name {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 9px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 30px;
+    color: color.$black-default;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: color 0.3s, text-decoration-color 0.3s;
+    text-decoration-thickness: from-font;
+
+    &.with-link {
+      &:hover {
+        text-decoration-color: inherit;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 6px;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        background: url('/img/icon-link.svg') center / contain no-repeat;
+        pointer-events: none;
+      }
+    }
+
+    a {
+      padding-right: 24px;
+      color: inherit;
+    }
+  }
+
+  &__short-description {
+    margin-bottom: 34px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: color.$pale;
+  }
+
+  &__description {
+    max-height: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    visibility: hidden;
+    opacity: 0;
+    transition: max-height 0.2s, visibility 0.2s, opacity 0.3s,
+      margin-bottom 0.3s;
+
+    p:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__item:hover &__description {
+    margin-bottom: 33px;
+    visibility: visible;
+    opacity: 1;
+
+    &--small {
+      max-height: 100px;
+    }
+
+    &--medium {
+      max-height: 200px;
+    }
+
+    &--large {
+      max-height: 340px;
+    }
+  }
+
+  &__stack-list {
+    display: flex;
+    gap: 11px;
+    flex-wrap: wrap;
+  }
+
+  &__stack-item {
+    padding: 4px 8px 6px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: color.$white-default;
+    border-radius: 10px;
+  }
 }

@@ -1,3 +1,104 @@
+@use './../../scss/mixins.scss';
+@use './../../scss/color.scss';
+
 .skills {
+  @include mixins.page;
   min-height: 100vh;
+
+  &__title {
+    @include mixins.title;
+    margin-bottom: 25px;
+  }
+
+  &__content {
+    display: flex;
+    gap: 39px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    width: 283px;
+    height: 585px;
+    padding: 32px 40px 100px 40px;
+    background-color: color.$bg-grey;
+    border-radius: 15px;
+  }
+
+  &__block-title {
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: center;
+    color: color.$black-default;
+  }
+
+  &__icons {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    width: 204px;
+    padding: 16px;
+    background-color: color.$white-default;
+    border-radius: 15px;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    transition: opacity 0.3s;
+    cursor: help;
+  }
+
+  &__icons.hover &__icon {
+    visibility: hidden;
+    opacity: 0;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__icon-name {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: color.$black-default;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+
+    &.top {
+      opacity: 1;
+      visibility: visible;
+      top: 30px;
+    }
+
+    &.bottom {
+      opacity: 1;
+      visibility: visible;
+      bottom: 30px;
+    }
+  }
+
+  &__text-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    gap: 14px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+  }
 }
