@@ -7,9 +7,11 @@ import Education from '../education/education';
 import Experience from '../experience/experience';
 import Projects from '../projects/projects';
 import { AnimatePresence } from 'motion/react';
+import useScrollToTop from '../../hooks/useScrollToTop';
 
 const RoutesWithAnimation = () => {
   const location = useLocation();
+  useScrollToTop();
 
   return (
     <AnimatePresence>
