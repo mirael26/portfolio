@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { routeVariants } from '../../animation/variants';
-import photo from './../../img/photo.png';
 import { useLocation } from 'react-router-dom';
 
 const About = () => {
@@ -13,9 +12,10 @@ const About = () => {
       variants={routeVariants}
       initial='initial'
       animate={isTransitionFromMainPage ? 'finalFromMain' : 'final'}
+      exit='exit'
       className='about'
     >
-      <p className='about__title'>Обо мне</p>
+      <h2 className='about__title'>Обо мне</h2>
       <div className='about__content'>
         <div className='about__text'>
           <p>Я Frontend разработчик, занимаюсь разработкой уже более 3 лет.</p>
@@ -42,7 +42,7 @@ const About = () => {
         </div>
         <img
           className='about__photo'
-          src={photo}
+          src='/img/photo.png'
           width='169'
           height='169'
           alt='Мое фото'

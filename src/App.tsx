@@ -1,5 +1,4 @@
 import { BrowserRouter } from 'react-router-dom';
-import { AnimatePresence } from 'motion/react';
 import RoutesWithAnimation from './components/routes-with-animation/routes-with-animation';
 import Common from './components/common/common';
 
@@ -9,9 +8,7 @@ const App = () => {
       <BrowserRouter>
         <Common />
 
-        <AnimatePresence>
-          <RoutesWithAnimation />
-        </AnimatePresence>
+        <RoutesWithAnimation />
       </BrowserRouter>
     </div>
   );

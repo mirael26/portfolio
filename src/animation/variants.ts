@@ -1,6 +1,6 @@
 export const routeVariants = {
   initial: {
-    y: '100px',
+    y: 100,
     opacity: 0,
   },
   final: {
@@ -9,8 +9,10 @@ export const routeVariants = {
     transition: {
       delay: 0.3,
       duration: 0.3,
-      // type: 'spring',
-      mass: 0.2,
+
+      type: 'spring',
+      mass: 0.6,
+      // mass: 0.2,
     },
   },
   finalFromMain: {
@@ -19,8 +21,17 @@ export const routeVariants = {
     transition: {
       delay: 1.2,
       duration: 0.3,
-      // type: 'spring',
-      mass: 0.2,
+
+      type: 'spring',
+      mass: 0.6,
+      // mass: 0.2,
+    },
+  },
+  exit: {
+    y: 100,
+    opacity: 0,
+    transition: {
+      duration: 0.3,
     },
   },
 };

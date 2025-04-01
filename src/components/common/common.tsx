@@ -3,6 +3,7 @@ import Menu from '../menu/menu';
 import { AppUrl } from '../../const';
 import { motion, Variants } from 'framer-motion';
 import MenuBig from '../menu-big/menu-big';
+import Contacts from '../contacts/contacts';
 
 const nameVariants: Variants = {
   initialMain: {
@@ -101,6 +102,7 @@ const Common = () => {
       {/* {pathname !== AppUrl.Main && <Menu />} */}
       <Menu />
       <MenuBig />
+      <Contacts />
     </div>
   );
 };

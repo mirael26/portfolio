@@ -1,0 +1,56 @@
+@use './../../scss/color.scss';
+
+.contacts {
+  z-index: 100;
+  position: fixed;
+  left: calc(50% + 407px);
+  bottom: 56px;
+  display: flex;
+  flex-direction: column;
+  width: 233px;
+  padding: 30px 24px 45px 37px;
+  background-color: color.$bg-grey;
+  border-radius: 15px;
+
+  &__title {
+    margin-bottom: 22px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    color: color.$black-default;
+  }
+
+  &__list {
+    display: flex;
+    gap: 11px;
+    margin-bottom: 21px;
+  }
+
+  &__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    transition: opacity 0.3s;
+
+    &:hover,
+    &:active {
+      opacity: 0.8;
+    }
+
+    &--telegram {
+      background: url('/img/tg-logo.svg') center no-repeat;
+    }
+
+    &--vk {
+      background: url('/img/vk-logo.svg') center no-repeat;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: color.$black-default;
+  }
+}
