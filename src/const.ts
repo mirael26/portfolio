@@ -8,7 +8,7 @@ export enum Pages {
 }
 
 export const AppUrl = {
-  Main: '/main',
+  Main: '/',
   About: '/about',
   Skills: '/skills',
   Education: '/education',

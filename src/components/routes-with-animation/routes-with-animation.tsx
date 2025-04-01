@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { AppUrl } from '../../const';
 import Main from '../main/main';
 import About from '../about/about';
@@ -16,7 +16,6 @@ const RoutesWithAnimation = () => {
   return (
     <AnimatePresence>
       <Routes location={location} key={location.key}>
-        <Route path='/' element={<Navigate replace to={AppUrl.Main} />} />
         <Route path={AppUrl.Main} element={<Main />} />
         <Route path={AppUrl.About} element={<About />} />
         <Route path={AppUrl.Skills} element={<Skills />} />
