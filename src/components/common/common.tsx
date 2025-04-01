@@ -10,19 +10,19 @@ const nameVariants: Variants = {
     y: 50,
     opacity: 0,
     fontSize: '64px',
-    top: '20%',
+    top: '20vh',
     left: 'calc(50% - 325px)',
   },
   main: {
     y: 0,
     opacity: 1,
     fontSize: '64px',
-    top: '20%',
+    top: '20vh',
     left: 'calc(50% - 325px)',
-    height: '100vh',
     transition: {
       ease: 'easeInOut',
       duration: 0.4,
+      delay: 0.4,
     },
   },
   common: {
@@ -30,9 +30,7 @@ const nameVariants: Variants = {
     opacity: 1,
     top: '22px',
     left: 0,
-    height: '87px',
-    fontSize: '32px',
-    scale: [1, 0.6, 1],
+    fontSize: ['64px', '24px', '32px'],
     transition: {
       ease: 'easeInOut',
       duration: 0.5,
@@ -45,7 +43,7 @@ const specialtyVariants = {
   initialMain: {
     y: 50,
     opacity: 0,
-    top: '276px',
+    top: '30vh',
     left: 'calc(50% - 187px)',
     fontSize: '36px',
   },
@@ -54,8 +52,7 @@ const specialtyVariants = {
     opacity: 1,
     top: '63px',
     left: 0,
-    fontSize: '16px',
-    scale: [1, 0.6, 1],
+    fontSize: ['36px', '8px', '16px'],
     transition: {
       ease: 'easeInOut',
       duration: 0.5,
@@ -65,13 +62,13 @@ const specialtyVariants = {
   main: {
     y: 0,
     opacity: 1,
-    top: '276px',
+    top: '30vh',
     fontSize: '36px',
     left: 'calc(50% - 187px)',
     transition: {
       ease: 'easeInOut',
       duration: 0.4,
-      delay: 0.3,
+      delay: 0.7,
     },
   },
 };
