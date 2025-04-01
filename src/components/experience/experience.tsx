@@ -24,7 +24,8 @@ const Experience = () => {
     <motion.section
       variants={routeVariants}
       initial='initial'
-      animate='final'
+      animate={isTransitionFromMainPage ? 'finalFromMain' : 'final'}
+      exit='exit'
       className='page experience'
     >
       <h2 className='experience__title'>Опыт работы</h2>

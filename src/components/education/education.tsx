@@ -46,8 +46,8 @@ const Education = () => {
         variants={{
           open: {
             transition: {
-              delayChildren: isTransitionFromMainPage ? 1.6 : 0.7,
-              staggerChildren: 0.2,
+              delayChildren: isTransitionFromMainPage ? 1.2 : 0.3,
+              staggerChildren: 0.3,
             },
           },
         }}
@@ -62,7 +62,7 @@ const Education = () => {
             variants={{
               open: {
                 transition: {
-                  delayChildren: isTransitionFromMainPage ? 1.6 : 0.7,
+                  delayChildren: isTransitionFromMainPage ? 1.5 : 0.6,
                   staggerChildren: 0.1,
                 },
               },

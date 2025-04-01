@@ -16,7 +16,24 @@ const About = () => {
       className='about'
     >
       <h2 className='about__title'>Обо мне</h2>
-      <div className='about__content'>
+      <motion.div
+        className='about__content'
+        variants={{
+          open: {
+            y: 0,
+            opacity: 1,
+            transition: {
+              type: 'spring',
+              bounce: 1,
+              mass: 0.5,
+              delay: isTransitionFromMainPage ? 1.5 : 0.6,
+            },
+          },
+          close: { y: 222, opacity: 0 },
+        }}
+        initial={'close'}
+        animate={'open'}
+      >
         <div className='about__text'>
           <p>Я Frontend разработчик, занимаюсь разработкой уже более 3 лет.</p>
           <p>
@@ -47,7 +64,7 @@ const About = () => {
           height='169'
           alt='Мое фото'
         />
-      </div>
+      </motion.div>
     </motion.section>
   );
 };

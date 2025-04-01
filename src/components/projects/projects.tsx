@@ -1,13 +1,31 @@
-import { motion } from 'motion/react';
+import { motion, Variants } from 'motion/react';
 import { routeVariants } from '../../animation/variants';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+
+const itemVariants: Variants = {
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 1,
+      mass: 0.5,
+    },
+  },
+  close: { y: 222, opacity: 0 },
+};
 
 const Projects = () => {
+  const location = useLocation();
+
+  const isTransitionFromMainPage = !!location.state?.fromMain;
+
   return (
     <motion.section
       variants={routeVariants}
       initial='initial'
-      animate='final'
+      animate={isTransitionFromMainPage ? 'finalFromMain' : 'final'}
+      exit='exit'
       className='page projects'
     >
       <div className='projects__header'>
@@ -20,8 +38,20 @@ const Projects = () => {
           GitHub
         </Link>
       </div>
-      <ul className='projects__list'>
-        <li className='projects__item'>
+      <motion.ul
+        className='projects__list'
+        variants={{
+          open: {
+            transition: {
+              delayChildren: isTransitionFromMainPage ? 1.5 : 0.6,
+              staggerChildren: 0.15,
+            },
+          },
+        }}
+        initial={'close'}
+        animate={'open'}
+      >
+        <motion.li className='projects__item' variants={itemVariants}>
           <p className='projects__name with-link'>
             <Link to={'https://elementcoffee.ru'} target='_blank'>
               Элемент кофе
@@ -40,9 +70,9 @@ const Projects = () => {
             <li className='projects__stack-item'>SCSS</li>
             <li className='projects__stack-item'>JavaScript</li>
           </ul>
-        </li>
+        </motion.li>
 
-        <li className='projects__item'>
+        <motion.li className='projects__item' variants={itemVariants}>
           <p className='projects__name with-link'>
             <Link to={'https://pavlov-mc.ru'} target='_blank'>
               Павлов Медикаль
@@ -57,9 +87,9 @@ const Projects = () => {
             <li className='projects__stack-item'>SCSS</li>
             <li className='projects__stack-item'>JavaScript</li>
           </ul>
-        </li>
+        </motion.li>
 
-        <li className='projects__item'>
+        <motion.li className='projects__item' variants={itemVariants}>
           <p className='projects__name'>Внутренний портал MyGenetics</p>
           <p className='projects__short-description'>
             SPA приложение портала с внутренними сервисами компании
@@ -85,9 +115,9 @@ const Projects = () => {
             <li className='projects__stack-item'>SCSS</li>
             <li className='projects__stack-item'>REST API</li>
           </ul>
-        </li>
+        </motion.li>
 
-        <li className='projects__item'>
+        <motion.li className='projects__item' variants={itemVariants}>
           <p className='projects__name with-link'>
             <Link to={'https://mygenetics.ru/vip/'} target='_blank'>
               MyGenetics VIP
@@ -106,9 +136,9 @@ const Projects = () => {
             <li className='projects__stack-item'>SCSS</li>
             <li className='projects__stack-item'>JavaScript</li>
           </ul>
-        </li>
+        </motion.li>
 
-        <li className='projects__item'>
+        <motion.li className='projects__item' variants={itemVariants}>
           <p className='projects__name'>Личный кабинет клиента</p>
           <p className='projects__short-description'>
             SPA приложение личного кабинета клиента на React и TypeScript
@@ -127,9 +157,9 @@ const Projects = () => {
             <li className='projects__stack-item'>TypeScript</li>
             <li className='projects__stack-item'>SCSS</li>
           </ul>
-        </li>
+        </motion.li>
 
-        <li className='projects__item'>
+        <motion.li className='projects__item' variants={itemVariants}>
           <p className='projects__name with-link'>
             <Link
               to={
@@ -154,8 +184,8 @@ const Projects = () => {
             <li className='projects__stack-item'>JavaScript</li>
             <li className='projects__stack-item'>Thymeleaf</li>
           </ul>
-        </li>
-      </ul>
+        </motion.li>
+      </motion.ul>
     </motion.section>
   );
 };
