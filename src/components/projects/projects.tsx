@@ -165,6 +165,7 @@ const Projects = () => {
               to={
                 'https://drive.google.com/file/d/1wWelEUgfhyDQn2rbXiHundO36R9yxtb6/view'
               }
+              target='_blank'
             >
               Генетические отчеты
             </Link>
