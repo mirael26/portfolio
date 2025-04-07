@@ -31,19 +31,33 @@
     width: 40px;
     height: 40px;
     font-size: 0;
-    transition: opacity 0.3s;
 
-    &:hover,
-    &:active {
-      opacity: 0.8;
+    svg {
+      transition: fill 0.3s;
     }
 
     &--telegram {
-      background: url('/img/tg-logo.svg') center no-repeat;
+      svg {
+        fill: #b5b2c6;
+      }
+    }
+
+    &--telegram:hover {
+      svg {
+        fill: #2aabee;
+      }
     }
 
     &--vk {
-      background: url('/img/vk-logo.svg') center no-repeat;
+      svg {
+        fill: #b5b2c6;
+      }
+    }
+
+    &--vk:hover {
+      svg {
+        fill: #4c75a3;
+      }
     }
   }
 
