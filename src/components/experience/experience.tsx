@@ -61,21 +61,51 @@ const Experience = () => {
               </p>
             </div>
           </div>
-          <div className='experience__text'>
+          <article className='experience__text'>
             <ul>
               <li>
-                Верстка шаблонов по макетам из Figma с использованием
-                шаблонизатора Thymeleaf
+                Разработка SPA-приложений на React (functional components, react
+                hooks, custom hooks, memoization)
               </li>
-              <li>Разработка лендингов</li>
               <li>
-                Разработка личных кабинетов (SPA приложения на React + Redux,
-                запросы на бэк: RestAPI, axios, формы на react-hook-forms)
+                Написание кода на Typescript (типизация компонентов и данных,
+                interfaces, types, generics)
               </li>
-              <li>Поддержка и доработка существующих проектов</li>
-              <li>Тесная работа с разработчиками, пм, дизайнером</li>
+              <li> Настройка роутинга на react-router-dom v8</li>
+              <li>
+                Создание форм на react-hook-form (валидация, зависимости между
+                полями: watch, массивы полей с useFieldArray)
+              </li>
+              <li>
+                Написание хранилища на Redux (actions, reducers, кэширование в
+                LocalStorage)
+              </li>
+              <li>
+                Написание REST-API запросов на бэк (axios, настройка
+                interceptors)
+              </li>
+              <li> Разработка UI kit</li>
+              <li> Подключение и настройка сторонних библиотек</li>
+              <li>
+                Использование и кастомизация компонентов библиотеки Material UI
+              </li>
+              <li> Адаптивная верстка лендингов по макетам из Figma</li>
+              <li> Добавление CSS анимаций, keyframes</li>
+              <li>
+                Верстка шаблонов по макетам из Figma с использованием
+                шаблонизатора Thymeleaf с использованием препроцессоров SCSS,
+                posthtml
+              </li>
+
+              <li>Поддержка и доработка существующих проектов, фикс багов</li>
+              <li>Работа в команде с ПМ, бэкенд-разработчиками. </li>
             </ul>
-          </div>
+            <p>
+              Проекты: Личный кабинет клиента. Разделы в портале компании: ЛК
+              для лаборатории, ЛК для отдела доставки, ЛК для отдела разработки.
+              Генетический отчет MyWellness, MyBeauty. Лендинг MyGenetics VIP.
+            </p>
+          </article>
           <ul className='experience__stack-list'>
             <li className='experience__stack-item'>Стек:</li>
             <li className='experience__stack-item'>React</li>
@@ -101,19 +131,33 @@ const Experience = () => {
               <p className='experience__position'>Стажер</p>
             </div>
           </div>
-          <p className='experience__text'>
+          <article className='experience__text'>
             <ul>
+              <li>Разработка SPA-приложения на React/Typescript</li>
+              <li>Настройка роутинга (react router dom v5)</li>
+              <li>Настройка отправки запросов на бэк</li>
               <li>
-                Разработка SPA-приложения, поддержка существующих проектов
+                Написание unit- и UI тестов на Jest и React testing library
               </li>
-              <li>Адаптивная и кроссбраузерная верстка</li>
-              <li>Верстка по макетам в Figma</li>
-              <li>Написание юнит-тестов</li>
               <li>
-                Работа в команде с разработчиками, тимлидом и тестировщиками
+                Адаптивная и кроссбраузерная верстка с использованием
+                препроцессоров Pug и SCSS
+              </li>
+              <li>Верстка по макетам Figma</li>
+              <li>
+                Написание JS фич (скрывающийся хэдер, плавный подскролл,
+                карусель)
+              </li>
+              <li>
+                Работа в команде с другими разработчиками, тимлидом и
+                тестировщиками.
               </li>
             </ul>
-          </p>
+            <p>
+              Проекты: Сайт компании Элемент кофе, Сайт компании Павлов
+              Медикаль.
+            </p>
+          </article>
           <ul className='experience__stack-list'>
             <li className='experience__stack-item'>Стек:</li>
             <li className='experience__stack-item'>SCSS</li>

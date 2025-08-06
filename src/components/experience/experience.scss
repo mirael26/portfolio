@@ -63,6 +63,13 @@
     font-size: 16px;
     line-height: 24px;
 
+    ul,
+    p {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
     ul {
       display: flex;
       flex-direction: column;
